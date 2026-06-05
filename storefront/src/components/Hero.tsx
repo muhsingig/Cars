@@ -27,7 +27,7 @@ export default function Hero() {
   const car = CARS[activeIdx];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-[#080808] flex flex-col justify-center">
+    <section className="relative h-screen md:h-screen w-full overflow-hidden bg-[#080808] flex flex-col justify-center">
       <motion.div style={{ y: backgroundY }} className="absolute inset-0 w-full h-[120%] -top-[10%] z-0">
         {mounted && CARS.map((c, idx) => (
           <video
@@ -42,7 +42,7 @@ export default function Hero() {
         ))}
       </motion.div>
 
-      <div className="absolute inset-0 z-[1] pointer-events-none bg-[linear-gradient(90deg,rgba(8,8,8,0.75)_0%,rgba(8,8,8,0.3)_35%,transparent_60%)]" />
+      <div className="absolute inset-0 z-[1] pointer-events-none bg-black/50 md:bg-[linear-gradient(90deg,rgba(8,8,8,0.75)_0%,rgba(8,8,8,0.3)_35%,transparent_60%)]" />
 
       {/* Prev / Next arrows */}
       <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 z-20 flex justify-between px-4 md:px-8 pointer-events-none">
@@ -56,14 +56,14 @@ export default function Hero() {
           <button
             key={c.id}
             onClick={() => setActiveIdx(idx)}
-            className={`transition-all duration-300 p-0 border-none outline-none focus:outline-none
+            className={`transition-all duration-300 p-0 outline-none focus:outline-none border-0
               /* Mobile: simple dots */
               w-2 h-2 rounded-full
               /* Desktop: full text tabs */
               md:w-auto md:h-auto md:rounded-none md:bg-transparent md:border md:border-solid md:font-inter md:text-[11px] md:tracking-[2px] md:uppercase md:px-4 md:py-2
               ${idx === activeIdx 
-                ? "bg-white !w-5 md:!w-auto border-[#6B21A8] md:text-white md:bg-[#6B21A8]/10" 
-                : "bg-white/20 border-white/10 md:text-white/30 md:hover:text-white/60"}`}
+                ? "bg-white !w-5 md:!w-auto md:border-[#6B21A8] md:text-white md:bg-[#6B21A8]/10" 
+                : "bg-white/20 md:border-white/10 md:text-white/30 md:hover:text-white/60"}`}
           >
             <span className="hidden md:inline">{c.tab}</span>
           </button>
