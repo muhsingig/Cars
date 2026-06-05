@@ -7,8 +7,7 @@ export default function ManifestBanner() {
       <img
         src="/banner-hero.png"
         alt=""
-        className="w-full object-cover block"
-        style={{ maxHeight: "90vh", minHeight: "400px" }}
+        className="w-full object-cover block h-[320px] sm:h-[400px] md:h-[550px] xl:h-[750px] object-[20%_center]"
       />
 
       {/* Overlay + text */}

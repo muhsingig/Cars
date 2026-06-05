@@ -22,12 +22,12 @@ export default function CTA() {
          ))}
        </h2>
        <p className="font-inter text-[18px] text-[#9A9A9A] max-w-[500px] mx-auto mb-12">One acts. One doesn't.</p>
-       <div className="flex flex-col md:flex-row justify-center gap-4 mb-20">
-         <a href="#the-cars" className="font-bebas text-[18px] tracking-[4px] px-14 py-5 uppercase text-white bg-[#6B21A8] btn-premium min-w-[300px]">START YOUR COLLECTION</a>
-         <button className="bg-transparent border border-white/[0.08] text-white/20 font-bebas text-[18px] tracking-[4px] px-14 py-5 uppercase min-w-[300px]">DO NOTHING.</button>
+       <div className="flex flex-col items-center md:flex-row md:justify-center gap-4 mb-20">
+         <a href="#the-cars" className="font-bebas text-[18px] tracking-[4px] px-10 md:px-14 py-5 uppercase text-white bg-[#6B21A8] btn-premium w-full max-w-[300px] md:w-auto md:min-w-[300px] text-center">START YOUR COLLECTION</a>
+         <button className="bg-transparent border border-white/[0.08] text-white/20 font-bebas text-[18px] tracking-[4px] px-10 md:px-14 py-5 uppercase w-full max-w-[300px] md:w-auto md:min-w-[300px] text-center">DO NOTHING.</button>
        </div>
      </motion.div>
-     <div className="absolute bottom-10 left-1/2 -translate-x-1/2 font-inter text-[12px] tracking-[2px] text-[#2A2A2A] uppercase w-full text-center z-10">
+     <div className="absolute bottom-10 left-1/2 -translate-x-1/2 font-inter text-[10px] md:text-[12px] tracking-[1px] md:tracking-[2px] text-[#2A2A2A] uppercase w-[90%] md:w-full text-center z-10">
        FREE WORLDWIDE SHIPPING · SHIPS IN 1–2 DAYS · 30-DAY SATISFACTION GUARANTEE
      </div>
    </section>

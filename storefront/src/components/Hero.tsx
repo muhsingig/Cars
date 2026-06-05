@@ -50,12 +50,22 @@ export default function Hero() {
         <button onClick={() => setActiveIdx(p => (p + 1) % CARS.length)} className="pointer-events-auto p-3 rounded-full bg-black/20 hover:bg-black/50 border border-white/10 text-white/50 hover:text-white backdrop-blur-md hidden md:block"><ChevronRight size={32} strokeWidth={1.5} /></button>
       </div>
 
-      {/* Tab pills */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      {/* Tab pills (Desktop) / Dots (Mobile) */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:gap-3 items-center justify-center">
         {CARS.map((c, idx) => (
-          <button key={c.id} onClick={() => setActiveIdx(idx)}
-            className={`font-inter text-[11px] tracking-[2px] uppercase px-4 py-2 border transition-all duration-300 ${idx === activeIdx ? "border-[#6B21A8] text-white bg-[#6B21A8]/10" : "border-white/10 text-white/30 hover:text-white/60"}`}>
-            {c.tab}
+          <button
+            key={c.id}
+            onClick={() => setActiveIdx(idx)}
+            className={`transition-all duration-300 p-0 border-none outline-none focus:outline-none
+              /* Mobile: simple dots */
+              w-2 h-2 rounded-full
+              /* Desktop: full text tabs */
+              md:w-auto md:h-auto md:rounded-none md:bg-transparent md:border md:border-solid md:font-inter md:text-[11px] md:tracking-[2px] md:uppercase md:px-4 md:py-2
+              ${idx === activeIdx 
+                ? "bg-white !w-5 md:!w-auto border-[#6B21A8] md:text-white md:bg-[#6B21A8]/10" 
+                : "bg-white/20 border-white/10 md:text-white/30 md:hover:text-white/60"}`}
+          >
+            <span className="hidden md:inline">{c.tab}</span>
           </button>
         ))}
       </div>
@@ -64,7 +74,7 @@ export default function Hero() {
       <div className="relative z-10 w-full px-6 md:pl-[4vw] xl:pl-[8vw] max-w-[600px] mt-12 md:mt-0">
         <AnimatePresence mode="wait">
           <motion.div key={car.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}>
-            <h1 className="font-bebas text-[clamp(64px,10vw,120px)] text-white leading-[0.87] mb-6 uppercase">{car.headline}</h1>
+            <h1 className="font-bebas text-[clamp(44px,8vw,110px)] text-white leading-[0.95] md:leading-[0.87] mb-6 uppercase">{car.headline}</h1>
             <p className="font-inter text-[16px] text-[#9A9A9A] max-w-[360px] leading-relaxed mb-10">{car.subline}</p>
             <a href="#the-cars" className="inline-block font-bebas text-[16px] tracking-[4px] px-10 py-4 uppercase text-white bg-[#6B21A8] btn-premium hover:bg-[#7E22CE] transition-colors duration-300">
               CLAIM YOURS — ${car.price}
