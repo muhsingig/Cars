@@ -5,7 +5,7 @@ const WORDS = [["TWO","VERSIONS"],["OF","YOU","EXIST"],["RIGHT","NOW."]];
 
 export default function CTA() {
  return (
-   <section className="relative h-screen w-full overflow-hidden bg-[#080808] flex items-center justify-center">
+   <section className="relative min-h-[100dvh] md:min-h-screen py-16 w-full overflow-hidden bg-[#080808] flex items-center justify-center">
      <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_100%_80%_at_50%_100%,rgba(107,33,168,0.12)_0%,transparent_70%)]" />
      <motion.div initial={{opacity:0,y:40}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.8}} className="relative z-10 text-center px-6">
        <div className="font-inter text-[11px] tracking-[6px] text-[#6B21A8] uppercase mb-8">THE CHOICE</div>

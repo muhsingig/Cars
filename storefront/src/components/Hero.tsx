@@ -27,7 +27,7 @@ export default function Hero() {
   const car = CARS[activeIdx];
 
   return (
-    <section className="relative h-screen md:h-screen w-full overflow-hidden bg-[#080808] flex flex-col justify-center">
+    <section className="relative h-[calc(100dvh-106px)] md:h-[calc(100vh-106px)] w-full overflow-hidden bg-[#080808] flex flex-col justify-center">
       <motion.div style={{ y: backgroundY }} className="absolute inset-0 w-full h-[120%] -top-[10%] z-0">
         {mounted && CARS.map((c, idx) => (
           <video
