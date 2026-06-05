@@ -56,11 +56,12 @@ export default function Hero() {
           <button
             key={c.id}
             onClick={() => setActiveIdx(idx)}
-            className={`transition-all duration-300 p-0 outline-none focus:outline-none border-0
+            aria-label={`Select ${c.tab}`}
+            className={`transition-all duration-300 p-0 outline-none focus:outline-none border-0 inline-block
               /* Mobile: simple dots */
               w-2 h-2 rounded-full
               /* Desktop: full text tabs */
-              md:w-auto md:h-auto md:rounded-none md:bg-transparent md:border md:border-solid md:font-inter md:text-[11px] md:tracking-[2px] md:uppercase md:px-4 md:py-2
+              md:w-auto md:h-auto md:rounded-none md:bg-transparent md:border md:border-solid md:font-inter md:text-[11px] md:tracking-[2px] md:uppercase md:px-4 md:py-2 md:inline-flex md:items-center md:justify-center
               ${idx === activeIdx 
                 ? "bg-white !w-5 md:!w-auto md:border-[#6B21A8] md:text-white md:bg-[#6B21A8]/10" 
                 : "bg-white/20 md:border-white/10 md:text-white/30 md:hover:text-white/60"}`}
