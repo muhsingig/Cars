@@ -42,7 +42,7 @@ export default function Hero() {
         ))}
       </motion.div>
 
-      <div className="absolute inset-0 z-[1] pointer-events-none bg-black/50 md:bg-[linear-gradient(90deg,rgba(8,8,8,0.75)_0%,rgba(8,8,8,0.3)_35%,transparent_60%)]" />
+      <div className="absolute inset-0 z-[1] pointer-events-none bg-black/60 md:bg-[linear-gradient(90deg,rgba(8,8,8,0.75)_0%,rgba(8,8,8,0.3)_35%,transparent_60%)]" />
 
       {/* Prev / Next arrows */}
       <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 z-20 flex justify-between px-4 md:px-8 pointer-events-none">
@@ -75,9 +75,9 @@ export default function Hero() {
       <div className="relative z-10 w-full px-6 md:pl-[4vw] xl:pl-[8vw] max-w-[600px] mt-12 md:mt-0">
         <AnimatePresence mode="wait">
           <motion.div key={car.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}>
-            <h1 className="font-bebas text-[clamp(34px,7.5vw,110px)] text-white leading-[1] md:leading-[0.87] mb-6 uppercase">{car.headline}</h1>
-            <p className="font-inter text-[15px] md:text-[16px] text-[#9A9A9A] max-w-[320px] md:max-w-[360px] leading-relaxed mb-8 md:mb-10">{car.subline}</p>
-            <a href="#the-cars" className="inline-block font-bebas text-sm md:text-[16px] tracking-[3px] md:tracking-[4px] px-8 py-3.5 md:px-10 md:py-4 uppercase text-white bg-[#6B21A8] btn-premium hover:bg-[#7E22CE] transition-colors duration-300">
+            <h1 className="font-bebas text-[clamp(28px,6.8vw,110px)] text-white leading-[1.05] md:leading-[0.87] mb-6 uppercase">{car.headline}</h1>
+            <p className="font-inter text-[14px] md:text-[16px] text-[#9A9A9A] max-w-[280px] md:max-w-[360px] leading-relaxed mb-8 md:mb-10">{car.subline}</p>
+            <a href="#the-cars" className="inline-block font-bebas text-xs md:text-[16px] tracking-[2px] md:tracking-[4px] px-6 py-3 md:px-10 md:py-4 uppercase text-white bg-[#6B21A8] btn-premium hover:bg-[#7E22CE] transition-colors duration-300">
               CLAIM YOURS — ${car.price}
             </a>
           </motion.div>
